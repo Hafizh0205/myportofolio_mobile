@@ -9,7 +9,7 @@ class MyHomePage extends StatelessWidget {
   final String nama = "Hafizh Zuhdi Hartanto";
   final String kelas = "PBP B";
 
-final List<ItemHomepage> items = [
+  final List<ItemHomepage> items = [
     ItemHomepage("Lihat Proyek", Icons.folder, Colors.indigo),
     ItemHomepage("Tambah Proyek", Icons.add_circle, Colors.amber.shade800),
     ItemHomepage("Tambah Edukasi", Icons.school, Colors.teal),
@@ -22,10 +22,7 @@ final List<ItemHomepage> items = [
       appBar: AppBar(
         title: const Text(
           'MyPortfolio',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         iconTheme: const IconThemeData(color: Colors.white),
@@ -96,10 +93,7 @@ class InfoCard extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text(
-              title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
+            Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8.0),
             Text(content, textAlign: TextAlign.center),
           ],

@@ -28,9 +28,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('Tambah Edukasi'),
-        ),
+        title: const Center(child: Text('Tambah Edukasi')),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
@@ -81,10 +79,12 @@ class _EducationFormPageState extends State<EducationFormPage> {
                   ),
                   initialValue: _degree,
                   items: _degrees
-                      .map((degree) => DropdownMenuItem(
-                            value: degree,
-                            child: Text(degree),
-                          ))
+                      .map(
+                        (degree) => DropdownMenuItem(
+                          value: degree,
+                          child: Text(degree),
+                        ),
+                      )
                       .toList(),
                   onChanged: (String? newValue) {
                     setState(() {
